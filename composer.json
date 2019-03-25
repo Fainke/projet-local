@@ -1,0 +1,12 @@
+{
+    "name": "stagiaire/slim-projet",
+    "authors": [
+        {
+            "name": "Fainke Makan",
+            "email": "makanfainke78@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "^3.12"
+    }
+}
