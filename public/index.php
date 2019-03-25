@@ -3,7 +3,6 @@
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
-
     require "../vendor/autoload.php";
 
 // Créer l’application Slim
