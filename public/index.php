@@ -1,5 +1,6 @@
 <?php
 
+use App\Controller\ContactController;
 use App\Controller\ProjetController;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -35,6 +36,10 @@ $container['view'] = function ($container) {
 $container[ProjetController::class] = function ($container){
     return new ProjetController($container->get('view'));
 };
+$container[ContactController::class] = function ($container) {
+    return new ContactController($container->get('view'));
+};
+
 
 // Créer une route avec un traitement
 $route = $app->get('/', function (RequestInterface $request, ResponseInterface $response, $args) {
@@ -52,6 +57,7 @@ $app->group('/projet', function() {
 
 });
 
+$app->get('/contact', ContactController::class . ':contact')->setName('app_contact');
 
 // Lancer l’application
 $app->run();
